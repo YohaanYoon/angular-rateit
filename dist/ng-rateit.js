@@ -132,18 +132,18 @@ angular.module('ngRateIt', ['ng'])
 
 	$templateCache.put('ngRateIt/ng-rate-it.html',
 
-		'<div class="ngrateit" ng-class="{\'ngrateit-readonly\': readOnly()}">' +
+		'<div class="ngrateiti needsclick" ng-class="{\'ngrateit-readonly\': readOnly()}">' +
 
     		'<a ' +
         		'ng-if="!readOnly() && resetable()"' +
         		'ng-click="removeRating()"' +
-        		'class="ngrateit-reset ngrateit-star"' +
+        		'class="ngrateit-reset ngrateit-star needsclick"' +
         		'ng-style="{\'width\': canelWidth+\'px\', \'height\':cancelHeight+\'px\'}"' +
     		'></a>' +
 
-    		'<div ng-if="!hide" id="origin" class="ngrateit-rating" ng-class="{\'ngrateit-hashover\':!isTouch}">' +
+    		'<div ng-if="!hide" id="origin" class="ngrateit-rating needsclick" ng-class="{\'ngrateit-hashover\':!isTouch}">' +
         		'<span ' +
-            		'class="ngrateit-star ngrateit-bg-star"' +
+            		'class="ngrateit-star ngrateit-bg-star needsclick"' +
             		'ng-repeat="i in getStartParts() track by $index" ' +
             		'ng-class="{\'ngrateit-selected\': isSelected($index) }"' +
             		'ng-click="setValue($index)"' +
